@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  background(510, 505, 955);
+  background(170, 950, 400);
 
   // Uncomment the code to try the different examples.
   // Comment it again before running the next one.
@@ -34,6 +34,16 @@ function draw() {
     pop();
   }
 
+   // square shadow
+  stroke(500, 0, 105);
+  for (var i = 0; i < 5000; i++) {
+    var sqBX = min(random(400, 350), random(10, 40));
+    var sqBY = max(random(30, 250), random(50, 530));
+    push();
+    rotate(-PI / 500);
+    point(sqBX, sqBY);
+    pop();
+  }
   //=== 2 - vertical line ===
   for (var i = 0; i < 2000; i++) {
    var x = random(width/2 - 20, width/2 + 20);
@@ -49,7 +59,7 @@ function draw() {
   }
 
   //=== 4 - circle ===
-   stroke(2000, 200, 0);
+   stroke(4000, 200, 0);
   translate(width / 2, height / 2);
   for (var i = 0; i < 90000; i++) {
    var dist = (random(-0.20, 0.50) * width) / 2.5;
@@ -62,8 +72,8 @@ function draw() {
   //=== 5 - wave ===
   stroke(0, 00, 800);
   translate(-255, height / 10);
-  var amp = 90;
-  for (var i = 0; i < 5000; i++) {
+  var amp = 90; 
+  for (var i = 0; i < 20000; i++) {
    var x = random(0, width);
    var y = cos((x / width) * PI * 6) * amp;
    y += random(-15, 15);
