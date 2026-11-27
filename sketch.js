@@ -59,7 +59,7 @@ function draw() {
   }
 
   //=== 4 - circle ===
-   stroke(4000, 200, 0);
+   stroke(4300, 200, 0);
   translate(width / 2, height / 2);
   for (var i = 0; i < 90000; i++) {
    var dist = (random(-0.20, 0.50) * width) / 2.5;
